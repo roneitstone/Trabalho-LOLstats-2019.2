@@ -53,6 +53,6 @@ def main ():
         print ('Até logo!')
         return 
     os.system("clear")
-    main()
+    return main()
 
 main()
