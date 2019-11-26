@@ -137,26 +137,28 @@ def primeiros_dados (save):
                                                                 return  save
     else:
         
-        lista=[]
-        lista.append(save[0])
+        save=[save]
+        for elem in save:
+            elem=elem[:-2]
+            save=elem.split("/")
         
-        print(lista)
-        lista.split("/")
-        dic = {'Rota': lista[0],
-                'Nome': lista[1],
-                'dicas':lista[2],
-                'Itens_Padroes':lista[3] ,
-                'Itens_Alternativos':lista[4],
-                'Skill.Q':lista[5],
-                'Skill.E': lista[6],
-                'Skill.W': lista[7],
-                'Skill.R': lista[8],
-                'passive':lista[9],
-                'taticas_ING':lista[10],
-                'win_rate': lista[11],
-                'dificuldade':lista[12],
-                'weak_again':lista[13],
-                "win_rate_elo":lista[14]
+        
+        
+        dic = {'Rota': save[0],
+                'Nome': save[1],
+                'dicas':save[2],
+                'Itens_Padroes':save[3] ,
+                'Itens_Alternativos':save[4],
+                'Skill.Q':save[5],
+                'Skill.E': save[6],
+                'Skill.W': save[7],
+                'Skill.R': save[8],
+                'passive':save[9],
+                'taticas_ING':save[10],
+                'win_rate': save[11],
+                'dificuldade':save[12],
+                'weak_again':save[13],
+                "win_rate_elo":save[14]
                 }
         print(logo())
         print("CHAMPION >>>>",dic["Nome"],end="\n")
@@ -165,7 +167,7 @@ def primeiros_dados (save):
         print(linha())
         print("dicas >>>>",dic["dicas"],end="\n")
         print(linha())
-        print("CORE BUILD >>>>>>",dic["Itens_Padrões"],end="\n")
+        print("CORE BUILD >>>>>>",dic["Itens_Padroes"],end="\n")
         print(logo())
         print("Side Build >>>>>>",dic["Itens_Alternativos"],end="\n")
         print(linha())
@@ -179,7 +181,7 @@ def primeiros_dados (save):
         print(logo())
         print("Skill [passiva]____",dic["passive"],"____",end="\n")
         print(linha())
-        print("Tatics in game>>>>",dic["taticas ING"],END="\n")
+        print("Tatics in game>>>>",dic["taticas_ING"],end="\n")
         print(linha())
         print("WIN RATE geral",dic["win_rate"],end="\n")
         print(linha())

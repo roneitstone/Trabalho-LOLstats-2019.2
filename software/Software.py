@@ -1,3 +1,4 @@
+import os
 from Screens import tela_1
 from Screens import tela_2
 from Screens import tela_3
@@ -38,13 +39,12 @@ def main ():
         print(save)
     if response == '~':
         print("recuperando dados ...")
-        response=[] 
-        response.append(tela_4.view())
-        print(response) 
-        if response[0]!= "=":
+         
+        response=tela_4.view()
+        
+        if response!= "=":
             tela_3.primeiros_dados(response)
-        else:
-            response=response[0]
+
     if response != 'jungler' and response != 'top' and response != 'adcarry' and response !='suport' and response !='mid' and response != '~' and response != '^' and response != '=':
         print(' nao é uma resposta valida, tente novamente XP')
         main()
@@ -52,6 +52,7 @@ def main ():
     if response ==  '=':
         print ('Até logo!')
         return 
+    os.system("clear")
     main()
 
 main()

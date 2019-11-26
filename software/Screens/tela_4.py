@@ -5,7 +5,7 @@ import os
 def interface(lista):
     cont=0
     for elem in lista:
-        print(elem[:-2])
+        
         elem=elem[:-2]
         
         elem=elem.split("/")
@@ -21,8 +21,7 @@ def interface(lista):
             return "="
         else:
             try :        
-                save=lista[int(choice)-1]
-            
+                save=lista[int(choice)-1] 
                 os.system("clear")
                 verify=1
                 return save
