@@ -6,10 +6,10 @@ def interface(lista):
     cont=0
     for elem in lista:
         
-        elem=elem[:-2]
+        elem=elem[:-1]
         
         elem=elem.split("/")
-        #print(elem)
+        
         cont+=1
         print(cont,"=",elem[0],"--",elem[1],end="\n")
     verify=0

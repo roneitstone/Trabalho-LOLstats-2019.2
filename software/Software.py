@@ -7,48 +7,29 @@ def linha():
     print("-="*40)
 def main ():
     baselist=[]
-    tela_1.inicial()
-    verify=0
-    while verify == 0:
-        response = tela_2.menu()
-        if response != 'jungler' and response != 'top' and response != 'adcarry' and response !='suport' and response !='mid' and response != '~' and response != '^' and response != '=':
-            print(' nao é uma resposta valida, tente novamente XP')
-            verify=0
-        else:
-            verify = 1
     
-    if response == 'jungler':
+    tela_1.inicial()
+    
+    response = tela_2.menu()
+
+    if response == 'new':
+        os.system("clear")
         save = tela_3.primeiros_dados(baselist)
         print('chegamos ate aqui')
         print(save)
-    if response == 'top':
-        save = tela_3.primeiros_dados(baselist)
-        print('chegamos ate aqui')
-        print(save)
-    if response == 'adcarry':
-        save = tela_3.primeiros_dados(baselist)
-        print('chegamos ate aqui')
-        print(save)
-    if response == 'suport':
-        save = tela_3.primeiros_dados(baselist)
-        print('chegamos ate aqui')
-        print(save)
-    if response == 'mid':
-        save = tela_3.primeiros_dados(baselist)
-        print('chegamos ate aqui')
-        print(save)
+
     if response == '~':
         print("recuperando dados ...")
          
         response=tela_4.view()
         
         if response!= "=":
+            os.system("clear")
             tela_3.primeiros_dados(response)
-
-    if response != 'jungler' and response != 'top' and response != 'adcarry' and response !='suport' and response !='mid' and response != '~' and response != '^' and response != '=':
+                 
+    if response != 'new' and response != '~' and response != '^' and response != '=':
         print(' nao é uma resposta valida, tente novamente XP')
-        main()
-    
+        
     if response ==  '=':
         print ('Até logo!')
         return 

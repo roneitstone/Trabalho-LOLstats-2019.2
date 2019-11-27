@@ -1,4 +1,108 @@
 import os
+def arquive(dic):
+    
+    cont=0
+    for value in dic.values():
+        
+        if dic["Rota"] == "top": 
+            arq=open("top.txt","a")
+            
+            for empty in value:
+                if empty == " ":
+                    cont+=1
+                    if cont>=2:
+                        arq.write("x.x")
+                        arq.write("/")
+
+            if value == "" or value == " ": 
+                arq.write("x.x")
+                arq.write("/")
+
+            else:
+
+                arq.write(value)
+                arq.write("/")    
+        
+        if dic["Rota"] == "mid":
+        
+            arq=open("mid.txt","a")
+            
+            for empty in value:
+                if empty == " ":
+                    cont+=1
+                    if cont>=2:
+                        arq.write("x.x")
+                        arq.write("/")
+
+            if value == "" or value == " ":
+                arq.write("x.x")
+                arq.write("/")
+
+            else:
+
+                arq.write(value)
+                arq.write("/")  
+
+        if dic["Rota"] == "jungler":
+        
+            arq=open("jungler.txt","a")
+            
+            for empty in value:
+                if empty == " ":
+                    cont+=1
+                    if cont>=2:
+                        arq.write("x.x")
+                        arq.write("/")
+    
+            if value == "" or value == " ": 
+                arq.write("x.x")
+                arq.write("/")
+
+            else:
+                arq.write(value)
+                arq.write("/")
+
+        if dic["Rota"] == "suport":
+        
+            arq=open("suport.txt","a")
+            
+            
+            for empty in value:
+                if empty == " ":
+                    cont+=1
+                    if cont>=2:
+                        arq.write("x.x")
+                        arq.write("/")
+            if value == "" or value == " ": 
+                arq.write("x.x")
+                arq.write("/")
+            else:
+                arq.write(value)
+                arq.write("/")
+
+        if dic["Rota"] == "adcarry":
+        
+            arq=open("adcarry.txt","a")
+            
+            
+            for empty in value:
+                if empty == " ":
+                    cont+=1
+                    if cont>=2:
+                        arq.write("x.x")
+                        arq.write("/")
+            
+            if value == "" or value == " ": 
+                arq.write("x.x")
+                arq.write("/")
+            else:
+                arq.write(value)
+                arq.write("/")
+
+    arq.write("\n")        
+    arq.close()
+    return 
+
 def logo():
     return "#"*20,"LOLSTATS","#"*20
 def linha():
@@ -19,6 +123,7 @@ def primeiros_dados (save):
         else:
             verify=0
             while verify == 0 :
+                print("Lembrando invocador , as unicas rotas aceitas são (top , jungler , mid , adcarry e suport) tilta não XD")
                 route = input('Rota: ')
                 if route == "=":
                     verify=1
@@ -34,6 +139,7 @@ def primeiros_dados (save):
                 return '='
             else:
                 while i_tens != 'sair': 
+                    print("agora se quiser sair dos (itens indicados) é so escrever sair")
                     i_tens =  input('Itens indicados: ')
                     if i_tens == '=':
                         saida = '='
@@ -119,12 +225,12 @@ def primeiros_dados (save):
                                                                 dic = {'Rota': route,
                                                                         'Nome': name,
                                                                         'dicas':dica,
-                                                                        'Itens_Padroes': itens,
-                                                                        'Itens_Alternativos': itens-b,
-                                                                        'Skill.Q': skill_q,
-                                                                        'Skill.E': skill_e,
-                                                                        'Skill.W': skill_w,
-                                                                        'Skill.R': skill_r,
+                                                                        'Itens_Padroes': "".join(itens),
+                                                                        'Itens_Alternativos': "".join(itens_b),
+                                                                        'Skill.Q': skill_Q,
+                                                                        'Skill.E': skill_E,
+                                                                        'Skill.W': skill_W,
+                                                                        'Skill.R': skill_R,
                                                                         'passive': passive,
                                                                         'taticas_ING':tatic,
                                                                         'win_rate': wr,
@@ -132,14 +238,15 @@ def primeiros_dados (save):
                                                                         'weak_again':wa,
                                                                         "win_rate_elo":wrelo
                                                                         }
-
+                                                                
                                                                 save+=dic.values()
+                                                                arquive(dic)
                                                                 return  save
     else:
         
         save=[save]
         for elem in save:
-            elem=elem[:-2]
+            elem=elem[:-1]
             save=elem.split("/")
         
         
