@@ -7,12 +7,12 @@ def save(dic):
         if dic["Rota"] == "top": 
             arq=open("top.txt","a")
             
-            for empty in value:
-                if empty == " ":
-                    cont+=1
-                    if cont>=2:
-                        arq.write("x.x")
-                        arq.write("/")
+      #      for empty in value:
+     #           if empty == " ":
+    #                cont+=1
+   #                 if cont>=2:
+  #                      arq.write("x.x")
+  #                      arq.write("/")
 
             if value == "" or value == " ": 
                 arq.write("x.x")
@@ -27,12 +27,12 @@ def save(dic):
         
             arq=open("mid.txt","a")
             
-            for empty in value:
-                if empty == " ":
-                    cont+=1
-                    if cont>=2:
-                        arq.write("x.x")
-                        arq.write("/")
+       #     for empty in value:
+             #   if empty == " ":
+            #        cont+=1
+           #         if cont>=2:
+          #              arq.write("x.x")
+         #               arq.write("/")
 
             if value == "" or value == " ":
                 arq.write("x.x")
@@ -47,12 +47,12 @@ def save(dic):
         
             arq=open("jungler.txt","a")
             
-            for empty in value:
-                if empty == " ":
-                    cont+=1
-                    if cont>=2:
-                        arq.write("x.x")
-                        arq.write("/")
+            #for empty in value:
+           #     if empty == " ":
+          #          cont+=1
+         #           if cont>=2:
+        #                arq.write("x.x")
+       #                 arq.write("/")
     
             if value == "" or value == " ": 
                 arq.write("x.x")
@@ -67,12 +67,12 @@ def save(dic):
             arq=open("suport.txt","a")
             
             
-            for empty in value:
-                if empty == " ":
-                    cont+=1
-                    if cont>=2:
-                        arq.write("x.x")
-                        arq.write("/")
+        #    for empty in value:
+     #           if empty == " ":
+     #               cont+=1
+     #               if cont>=2:
+       #                 arq.write("x.x")
+       #                 arq.write("/")
             if value == "" or value == " ": 
                 arq.write("x.x")
                 arq.write("/")
@@ -85,12 +85,12 @@ def save(dic):
             arq=open("adcarry.txt","a")
             
             
-            for empty in value:
-                if empty == " ":
-                    cont+=1
-                    if cont>=2:
-                        arq.write("x.x")
-                        arq.write("/")
+            #for empty in value:
+            #    if empty == " ":
+            #        cont+=1
+             #       if cont>=2:
+             #           arq.write("x.x")
+              #          arq.write("/")
             
             if value == "" or value == " ": 
                 arq.write("x.x")
@@ -127,7 +127,7 @@ def primeiros_dados (dados):
                 route = input('Rota: ')
                 if route == "=":
                     verify=1
-                if route != "jungler" and route != "top" and route != "mid" and route != " adcarry" and route != "suport":
+                if route != "jungler" and route != "top" and route != "mid" and route != "adcarry" and route != "suport":
                     verify=0
                     print("digite uma rota existente, invocador :/")
                 else:
@@ -139,12 +139,12 @@ def primeiros_dados (dados):
                 return '='
             else :
                 while i_tens != 'sair': 
-                    print("agora se quiser sair dos (itens indicados) é so escrever sair")
+                    print("(agora se quiser sair dos (itens indicados) é so escrever (sair))")
                     i_tens =  input('Itens indicados: ')
                     if i_tens == '=':
                         saida = '='
                         i_tens = 'sair'
-                    if i_tens == "sair":
+                    if i_tens != "sair":
                         itens.append(i_tens)
                         itens.append(",")
                 if len(itens) == 0:
@@ -155,15 +155,15 @@ def primeiros_dados (dados):
                     return '='
                 else:
                     itens.pop()
-                    print('digite os itens e quando acabar digite sair para continuar')
-                    print('para sair do programa ainda vale digitar =')
+                    print('(digite os itens e quando acabar digite (sair) para continuar)')
+                    print('para sair do programa ainda vale digitar (=)')
                     while i_tens_b != 'sair': 
                         i_tens_b =  input('Itens alternativos: ')
                         
                         if i_tens_b == '=':
                             saida_b = '='
                             i_tens_b = 'sair'
-                        if i_tens_b == "sair":
+                        if i_tens_b != "sair":
                             itens_b.append(i_tens_b)
                             itens_b.append(",")
                     if len(itens_b) == 0:

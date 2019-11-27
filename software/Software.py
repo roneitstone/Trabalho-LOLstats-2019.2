@@ -3,6 +3,7 @@ from Screens import tela_1
 from Screens import tela_2
 from Screens import tela_3
 from Screens import tela_4
+from Screens import editora
 def linha():
     print("-="*40)
 def main ():
@@ -23,11 +24,10 @@ def main ():
          
         response=tela_4.view()
         
-        if response!= "=":
+        if response!= "=" and response != "-":
             os.system("clear")
             tela_3.primeiros_dados(response)
-                 
-    if response != 'new' and response != '~' and response != '^' and response != '=':
+    if response != 'new' and response != '~' and response != '=':
         print(' nao é uma resposta valida, tente novamente XP')
         
     if response ==  '=':
