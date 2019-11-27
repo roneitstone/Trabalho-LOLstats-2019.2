@@ -1,5 +1,5 @@
 import os
-def arquive(dic):
+def save(dic):
     
     cont=0
     for value in dic.values():
@@ -107,8 +107,8 @@ def logo():
     return "#"*20,"LOLSTATS","#"*20
 def linha():
     return "-="*40
-def primeiros_dados (save):
-    if len(save) == 0: 
+def primeiros_dados (dados):
+    if len(dados) == 0: 
         name = input('Nome do campeão: ')
         saida_b = ''
         itens = []
@@ -137,14 +137,19 @@ def primeiros_dados (save):
             if route == '=':
                 print('saindo...')
                 return '='
-            else:
+            else :
                 while i_tens != 'sair': 
                     print("agora se quiser sair dos (itens indicados) é so escrever sair")
                     i_tens =  input('Itens indicados: ')
                     if i_tens == '=':
                         saida = '='
                         i_tens = 'sair'
-                    itens.append(i_tens)
+                    if i_tens == "sair":
+                        itens.append(i_tens)
+                        itens.append(",")
+                if len(itens) == 0:
+                    itens=["x.x"]
+
                 if saida == '=':
                     print('saindo...')
                     return '='
@@ -154,10 +159,16 @@ def primeiros_dados (save):
                     print('para sair do programa ainda vale digitar =')
                     while i_tens_b != 'sair': 
                         i_tens_b =  input('Itens alternativos: ')
+                        
                         if i_tens_b == '=':
                             saida_b = '='
                             i_tens_b = 'sair'
-                        itens_b.append(i_tens_b)
+                        if i_tens_b == "sair":
+                            itens_b.append(i_tens_b)
+                            itens_b.append(",")
+                    if len(itens_b) == 0:
+                        itens_b=["x.x"]
+                  
                     if saida_b == '=':
                         print('saindo...')
                         return '='
@@ -194,7 +205,7 @@ def primeiros_dados (save):
                                                 print('saindo...')
                                                 return '='
                                             else:
-                                                wr=input("diga o winrate desse tipo de game >>")
+                                                wr=input("diga o winrate profissionalmente >>")
                                                 if wr == '=':
                                                     print('saindo...')
                                                     return '='
@@ -238,34 +249,34 @@ def primeiros_dados (save):
                                                                         'weak_again':wa,
                                                                         "win_rate_elo":wrelo
                                                                         }
-                                                                
-                                                                save+=dic.values()
-                                                                arquive(dic)
-                                                                return  save
+                                                                print(dic)
+                                                                dados+=dic.values()
+                                                                save(dic)
+                                                                return  "dados gravados com sucesso"
     else:
         
-        save=[save]
-        for elem in save:
+        dados=[dados]
+        for elem in dados:
             elem=elem[:-1]
-            save=elem.split("/")
+            dados=elem.split("/")
         
         
         
-        dic = {'Rota': save[0],
-                'Nome': save[1],
-                'dicas':save[2],
-                'Itens_Padroes':save[3] ,
-                'Itens_Alternativos':save[4],
-                'Skill.Q':save[5],
-                'Skill.E': save[6],
-                'Skill.W': save[7],
-                'Skill.R': save[8],
-                'passive':save[9],
-                'taticas_ING':save[10],
-                'win_rate': save[11],
-                'dificuldade':save[12],
-                'weak_again':save[13],
-                "win_rate_elo":save[14]
+        dic = {'Rota': dados[0],
+                'Nome': dados[1],
+                'dicas':dados[2],
+                'Itens_Padroes':dados[3] ,
+                'Itens_Alternativos':dados[4],
+                'Skill.Q':dados[5],
+                'Skill.E': dados[6],
+                'Skill.W': dados[7],
+                'Skill.R': dados[8],
+                'passive':dados[9],
+                'taticas_ING':dados[10],
+                'win_rate': dados[11],
+                'dificuldade':dados[12],
+                'weak_again':dados[13],
+                "win_rate_elo":dados[14]
                 }
         print(logo())
         print("CHAMPION >>>>",dic["Nome"],end="\n")
