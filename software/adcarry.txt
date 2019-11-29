@@ -1,2 +1,6 @@
 adcarry/Ashe/farme-bem-no-início-e-pegue-prioridade-na-rota-sempre-que-possível/espada-do-rei-destruído/furacao-de-runnan/gume-do-infinito/concentracao/rajada/olhar-do-falcao/flecha-de-cristal-encantada/tiro-congelado/acumule-vantagem-para-devastar-o-late-game/49%-Profissional/2/win-rate-vs-ezreal-49%-lucian-50%/ferro-52%win/
+<<<<<<< HEAD
 adcarry/Teemo/recuado na torre ate lvl 3/rabadon,zhonias/dente de nashor/dardo tranquilizante/envenenamento/fuga/cogumelo surpresa/invisivel/trocar com alguem q pisou no cogumelo/40%/2/elise/40%/
+=======
+adcarry/Teemo/recuado na torre ate lvl 3/rabadon,zhonias/dente de nashor/dardo tranquilizante/envenenamento/fuga/cogumelo surpresa/invisivel/trocar com alguem q pisou no cogumelo/40%/2/elise/60%/
+>>>>>>> 9cc6cecb88a6ccefd04a69da5699e8f4bdd7d811

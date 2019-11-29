@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 top/Garen/n-seja-um-pao/cutelo-negro/fúria-de-sterak/acerto-decisivo/coragem/julgamento/justiça-demaciana/perseverança/colocar-pressao-nos-matchups-melees/50%-Profissional/2/win-rate-vs-jax-50%-fiora-49%/ferro-60%win/
 top/Gnar/controle-de-forma-consciente-sua-passiva/cutelo-negro/malho-congelado/bumerange/pedregulho/hiperativo/safanao:salto/encontrao/gnar!/3/pegar-prioridade-na-rota-e-wardar-a-jungle-adversária/48%-Profissional/x.x/
+=======
+top/Garen/n-seja-um-pao/cutelo-negro/fúria-de-sterak/acerto-decisivo/coragem/julgamento/justiça-demaciana/perseverança/colocar-pressao-nos-matchups-melees/50%-Profissional/1/win-rate-vs-jax-50%-fiora-49%/ferro-60%win/
+top/Gnar/controle-de-forma-consciente-sua-passiva/cutelo-negro/malho-congelado/bumerange/pedregulho/hiperativo/safanao/salto/encontrao/gnar!/fúria-gentética/pegar-prioridade-na-rota-e-wardar-a-jungle-adversária/48%-Profissional/5/win-rate-vs-camille-51%-garen-52%/ferro-50%win/
+>>>>>>> 9cc6cecb88a6ccefd04a69da5699e8f4bdd7d811
