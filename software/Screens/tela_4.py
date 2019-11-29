@@ -5,6 +5,7 @@ from Screens import tela_1
 import os
 def interface(lista):
     cont=0
+    
     for elem in lista:
         
         elem=elem[:-1]
@@ -12,9 +13,10 @@ def interface(lista):
         elem=elem.split("/")
         
         cont+=1
+        
         print(cont,"=",elem[0],"--",elem[1],end="\n")
-    verify=0
     
+    verify=0
     while verify == 0:
         choice=input("Escolha uma opção invocador, para ver o save digite o seu número, para editar digite (-) e para voltar digite (=), para apagar um save digite(*) >> ")
         linha()
@@ -42,8 +44,8 @@ def interface(lista):
 
         if choice == "-":
             
-            print("*[entrando no menu de edição...]*")
             os.system("clear")
+            print("*[entrando no menu de edição...]*")
             
             cont=0
             for elem in lista:
@@ -62,21 +64,20 @@ def interface(lista):
                     linha()
                     line=int(input("digite o numero do save a ser editado ,invocador>> "))
                     linha()
-                    if line > cont:
-                        
-                        print("*[não existe esse save]*")
-                        verify = 0
-                    if line <= cont:
-                        
-                        editora.edit(lista,line)
-                        return "*"
-                        verify=1
-                
                 except:
                     print("*[use os números invocador :)]*")
-                    verify=0 
-            
-        
+                    verify=0
+
+                if line > cont:
+                    
+                    print("*[não existe esse save]*")
+                    verify = 0
+                if line <= cont:
+                    verify=1 
+                    editora.edit(lista,line)
+                    return "*"
+                    verify=1
+
         if choice != "*" and choice != "=" and choice != "-":
             
             try :        
@@ -95,14 +96,19 @@ def linha():
     print("-="*40)
 def view():
     linha()   
+    print("-="*20,"VIEW","-="*20)
+    #linha()
     verify = 0
     while verify == 0:
+        print("*[escolha uma dessas rotas invocador top, mid, adcarry, suport, jungler.]*")
         linha()
         response =input("Qual a lane você deseja ver os saves invocador ?>>")
         linha()
         if response != "top" and response != "mid" and response != "adcarry" and response != "suport" and response != "jungler":
             verify = 0
             print("*[invocador essa lane não existe , tente novamente :)]*")
+            linha()
+
         else:
             verify = 1
     
