@@ -3,6 +3,7 @@ from Screens import tela_4
 def editarquivo(dic,line,dados):
     cont=0
     save=[]
+    
     for value in dic.values():
         if value == "" or value == " ": 
             save.append("x.x")
@@ -10,9 +11,10 @@ def editarquivo(dic,line,dados):
         else:
             save.append(value)
             save.append("/")
+    if dic["nome"] != "":    
+        save.append("\n")
+        dados[line-1]=''.join(save)
     
-    save.append("\n")
-    dados[line-1]=''.join(save)
     if dic["rota"] == "adcarry":
 
         arq=open("adcarry.txt","w")
@@ -37,9 +39,13 @@ def editarquivo(dic,line,dados):
         arq=open("suport.txt", "w")
         arq.write("")
     arq.close()
+    if dic["nome"] == "delete":
+        dados.pop(line-1)
+        
     for elem in dados: 
-        string="".join(elem)
-        print(dados)
+        
+        string=elem
+        
         if dic["rota"] == "adcarry":
 
             arq=open("adcarry.txt","a")
@@ -105,8 +111,8 @@ def edit(dados,line):
     print("keys usaveis >>>",dic.keys())
     
     while verify == 0:
-
-        print("não se esqueça de digitar igual ao mostrado para acessar o local e para sair digite =, invocador")
+        logo()
+        print("*[não se esqueça de digitar igual ao mostrado para acessar o local e para sair digite (=), invocador]*")
         linha()
         choice=input("digite o local que deseja editar >>>")
         
@@ -115,7 +121,7 @@ def edit(dados,line):
         
         if choice != "rota" and choice!="nome" and choice!="dicas" and choice != "itens_padroes" and choice!="itens_alternativos" and choice!= "skill.e" and choice!= "skill.q" and choice!= "skill.w" and choice!="skill.r" and choice!= "passive" and choice!= "taticas_ing" and choice!="win_rate" and choice!="dificuldade" and choice!="weak_again" and choice!= "win_rate_elo" and choice!= "=":
             
-            print("Esse local não existe invocador :(")
+            print("*[Esse local não existe invocador]*")
             verify=0
         
         else:
@@ -124,7 +130,8 @@ def edit(dados,line):
             linha()
             print("antigo>>>",dic[choice],"// novo>>>",mudanca)
             dic[choice]=mudanca
-        
+            
 
     os.system("clear")
-    return editarquivo(dic,line,dados)
+    editarquivo(dic,line,dados)
+    return

@@ -16,13 +16,33 @@ def interface(lista):
     verify=0
     
     while verify == 0:
-        choice=input("Escolha uma opção invocador, para ver o save digite o seu número, para editar digite (-) e para voltar (=) >>")
+        choice=input("Escolha uma opção invocador, para ver o save digite o seu número, para editar digite (-) e para voltar digite (=), para apagar um save digite(*) >> ")
         linha()
+        
+        if choice == "*":
+            
+            dic={"rota":elem[0],"nome":"delete"} 
+            print("digite o numero do save a ser apagado>> ")
+            try:
+                line = int(input("linha>> "))
+                linha()
+                
+                editora.editarquivo(dic,line,lista)
+                print("*[save apagado com suscesso, invocador]*")
+                verify = 1
+                return "*"
+            
+            except:
+                print("*[erro ao procurar]*")
+                verify=0
+        
         if choice == "=":
-            return 
+            
+            return "*"
+
         if choice == "-":
             
-            print("entrando no menu de edição...")
+            print("*[entrando no menu de edição...]*")
             os.system("clear")
             
             cont=0
@@ -43,27 +63,34 @@ def interface(lista):
                     line=int(input("digite o numero do save a ser editado ,invocador>> "))
                     linha()
                     if line > cont:
-                        print("não existe esse save")
+                        
+                        print("*[não existe esse save]*")
                         verify = 0
-                    else:
+                    if line <= cont:
+                        
                         editora.edit(lista,line)
-                        verify = 1
-                        return "-"
-                except:
-                    print("use numeros invocador :)")
+                        return "*"
+                        verify=1
                 
+                except:
+                    print("*[use os números invocador :)]*")
+                    verify=0 
             
         
-        else:
+        if choice != "*" and choice != "=" and choice != "-":
+            
             try :        
+                
                 save=lista[int(choice)-1] 
                 os.system("clear")
                 verify=1
                 return save
+            
             except:
-                print("opção inexistente invocador")
+                
+                print("*[opção inexistente invocador]*")
         
-    
+    return "*"
 def linha():
     print("-="*40)
 def view():
@@ -75,7 +102,7 @@ def view():
         linha()
         if response != "top" and response != "mid" and response != "adcarry" and response != "suport" and response != "jungler":
             verify = 0
-            print("invocador essa lane não existe , tente novamente :)")
+            print("*[invocador essa lane não existe , tente novamente :)]*")
         else:
             verify = 1
     

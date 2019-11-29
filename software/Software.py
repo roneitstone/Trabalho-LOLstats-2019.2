@@ -21,10 +21,10 @@ def main ():
 
     if response == '~':
         print("recuperando dados ...")
-         
+        os.system("clear") 
         response=tela_4.view()
         
-        if response!= "=" and response != "-":
+        if response!= "=" and response != "-" and response != "*":
             os.system("clear")
             tela_3.primeiros_dados(response)
     if response != 'new' and response != '~' and response != '=':

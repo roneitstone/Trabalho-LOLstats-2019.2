@@ -1,3 +1,2 @@
-top/Garen/n-seja-um-pao/cutelo-negro/fúria-de-sterak/Q-acerto-decisivo/W-coragem/E-julgamento/R-justiça-demaciana/Passiva-perseverança/colocar-pressao-nos-matchups-melees/50%-Profissional/1/win-rate-vs-jax-50%-fiora-49%/ferro-60%win/
-top/Garen/pao eh comestivel/cutelo-negro/fúria-de-sterak/Q-acerto-decisivo/W-coragem/E-julgamento/R-justiça-demaciana/Passiva-perseverança/colocar-pressao-nos-matchups-melees/50%-Profissional/1/win-rate-vs-jax-50%-fiora-49%/ferro-60%win/
-top/Taliyah/fique recuado farmando e aproveitando as waves/x.x/x.x/teste q/testee/x.x/teste w/x.x/teste r/60%/teste/x.x/teste/
+top/Garen/n-seja-um-pao/cutelo-negro/fúria-de-sterak/acerto-decisivo/coragem/julgamento/justiça-demaciana/perseverança/colocar-pressao-nos-matchups-melees/50%-Profissional/2/win-rate-vs-jax-50%-fiora-49%/ferro-60%win/
+top/Gnar/controle-de-forma-consciente-sua-passiva/cutelo-negro/malho-congelado/bumerange/pedregulho/hiperativo/safanao:salto/encontrao/gnar!/3/pegar-prioridade-na-rota-e-wardar-a-jungle-adversária/48%-Profissional/x.x/
