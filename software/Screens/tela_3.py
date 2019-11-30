@@ -106,17 +106,30 @@ def save(dic):
 def logo():
     return "#"*20,"LOLSTATS","#"*20
 def linha():
-    return "-="*40
+    return "."*80
 def primeiros_dados (dados):
     if len(dados) == 0: 
-        name = input('Nome do campeão: ')
+        verify=0
+        while verify == 0:
+            name = input('Nome do campeão: ')
+            if len(name) > 20:
+                verify = 0
+                print()
+                print("nome grande de mais invocador")
+                print()
+            if len(name) <= 20:
+                verify=1
+
         saida_b = ''
         itens = []
         itens_b = []
         i_tens = 'a'
         i_tens_b = 'b'
+        
         saida = ''
+        
         print("invocador escreva os dados que você quer armazenar agora e não esqueça , caso queira sair é só apertar = em qualquer pergunta ")
+        
         if name == '=':
             print('saindo...')
             return '='
@@ -124,22 +137,25 @@ def primeiros_dados (dados):
             verify=0
             while verify == 0 :
                 print("Lembrando invocador , as unicas rotas aceitas são (top , jungler , mid , adcarry e suport) tilta não XD")
+                
                 route = input('Rota: ')
+                
                 if route == "=":
                     verify=1
+                
                 if route != "jungler" and route != "top" and route != "mid" and route != "adcarry" and route != "suport":
                     verify=0
                     print("digite uma rota existente, invocador :/")
                 else:
                     verify=1
             
-            
             if route == '=':
                 print('saindo...')
                 return '='
             else :
+                print("(agora se quiser sair dos (itens indicados) é so escrever (sair))")
                 while i_tens != 'sair': 
-                    print("(agora se quiser sair dos (itens indicados) é so escrever (sair))")
+                    
                     i_tens =  input('Itens indicados: ')
                     if i_tens == '=':
                         saida = '='
@@ -148,7 +164,12 @@ def primeiros_dados (dados):
                         itens.append(i_tens)
                         itens.append(",")
                 if len(itens) == 0:
+                    
                     itens=["x.x"]
+
+                if len(itens) == 6:
+                    
+                    i_tens= "sair"
 
                 if saida == '=':
                     print('saindo...')
@@ -163,9 +184,14 @@ def primeiros_dados (dados):
                         if i_tens_b == '=':
                             saida_b = '='
                             i_tens_b = 'sair'
+                        
                         if i_tens_b != "sair":
                             itens_b.append(i_tens_b)
                             itens_b.append(",")
+                        
+                        if len(itens_b) == 10:
+                            i_tens_b = "sair"
+
                     if len(itens_b) == 0:
                         itens_b=["x.x"]
                   
@@ -280,34 +306,49 @@ def primeiros_dados (dados):
                 }
         print(logo())
         print("CHAMPION >>>>",dic["Nome"],end="\n")
+        print()
         print(linha())
         print("ROTA >>>>",dic["Rota"],end="\n")
+        print()
         print(linha())
         print("dicas >>>>",dic["dicas"],end="\n")
+        print()
         print(linha())
         print("CORE BUILD >>>>>>",dic["Itens_Padroes"],end="\n")
+        print()
         print(logo())
         print("Side Build >>>>>>",dic["Itens_Alternativos"],end="\n")
+        print()
         print(linha())
         print("Skill [Q] ____",dic["Skill.Q"],"____",end="\n")
+        print()
         print(linha())
         print("Skill [w]____",dic["Skill.W"],"____",end="\n")
+        print()
         print(linha())
         print("Skill [E]____",dic["Skill.E"],"____",end="\n")
+        print()
         print(linha())
         print("Skill [R]____",dic["Skill.R"],"____",end="\n")
+        print()
         print(logo())
         print("Skill [passiva]____",dic["passive"],"____",end="\n")
+        print()
         print(linha())
         print("Tatics in game>>>>",dic["taticas_ING"],end="\n")
+        print()
         print(linha())
         print("WIN RATE geral",dic["win_rate"],end="\n")
+        print()
         print(linha())
         print("Dificuldade de jogar",dic["dificuldade"],end="\n")
+        print()
         print(linha())
         print("Weak agains --",dic["weak_again"],end="\n")
+        print()
         print(linha())
         print("Win rate no seu elo >>>",dic["win_rate_elo"],"<<<",end="\n")
+        print()
         print(logo())
         espace=input("presione qualquer tecla para voltar ao menu :)")
         return ''

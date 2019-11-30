@@ -112,23 +112,33 @@ def edit(dados,line):
     
     while verify == 0:
         logo()
+        print()
         print("*[não se esqueça de digitar igual ao mostrado para acessar o local e para sair digite (=), invocador]*")
+        print()
         linha()
+        print()
         choice=input("digite o local que deseja editar >>>")
+        print()
+        linha()
         
         if choice == "=":
             break
         
         if choice != "rota" and choice!="nome" and choice!="dicas" and choice != "itens_padroes" and choice!="itens_alternativos" and choice!= "skill.e" and choice!= "skill.q" and choice!= "skill.w" and choice!="skill.r" and choice!= "passive" and choice!= "taticas_ing" and choice!="win_rate" and choice!="dificuldade" and choice!="weak_again" and choice!= "win_rate_elo" and choice!= "=":
-            
+            print()
             print("*[Esse local não existe invocador]*")
+            print()
             verify=0
         
         else:
             logo()
+            print()
             mudanca=input("digite a nova mudança >>")
+            print()
             linha()
+            print()
             print("antigo>>>",dic[choice],"// novo>>>",mudanca)
+            print()
             dic[choice]=mudanca
             
 
