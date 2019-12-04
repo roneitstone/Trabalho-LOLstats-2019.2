@@ -1,5 +1,6 @@
 import os
 from Screens import tela_4
+from tela_3 import anti_crash
 def editarquivo(dic,line,dados):
     cont=0
     save=[]
@@ -9,6 +10,7 @@ def editarquivo(dic,line,dados):
             save.append("x.x")
             save.append("/")
         else:
+            value = tela_3.anti_crash(value)
             save.append(value)
             save.append("/")
     if dic["nome"] != "":    
@@ -133,7 +135,10 @@ def edit(dados,line):
         else:
             logo()
             print()
+            print('Lembrando que não poderá ser usadas / nos novos valores adicionados')
+            print()
             mudanca=input("digite a nova mudança >>")
+            mudanca =  tela_3.anti_crash(mudanca)
             print()
             linha()
             print()

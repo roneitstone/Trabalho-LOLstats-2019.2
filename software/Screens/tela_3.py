@@ -102,7 +102,14 @@ def save(dic):
     arq.write("\n")        
     arq.close()
     return 
-
+def anti_crash(vlr):
+    lista = []
+    for caractr in range (len(vlr)):
+        if vlr[caractr] == '/':
+            lista.append(';')
+        else:
+            lista.append(vlr[caractr])
+    return ''.join(lista)
 def logo():
     return "#"*20,"LOLSTATS","#"*20
 def linha():
@@ -111,6 +118,8 @@ def primeiros_dados (dados):
     if len(dados) == 0: 
         verify=0
         while verify == 0:
+            print('lembrando invocador, por favor nao utilize / no preenchimento das perguntas')
+            print()
             name = input('Nome do campeão: ')
             if len(name) > 20:
                 verify = 0
@@ -118,6 +127,7 @@ def primeiros_dados (dados):
                 print("nome grande de mais invocador")
                 print()
             if len(name) <= 20:
+                name = anti_crash(name)
                 verify=1
 
         saida_b = ''
@@ -153,6 +163,8 @@ def primeiros_dados (dados):
                 print('saindo...')
                 return '='
             else :
+                route = anti_crash(route)
+                cont = 0
                 print("(agora se quiser sair dos (itens indicados) é so escrever (sair))")
                 while i_tens != 'sair': 
                     
@@ -161,15 +173,16 @@ def primeiros_dados (dados):
                         saida = '='
                         i_tens = 'sair'
                     if i_tens != "sair":
+                        i_tens = anti_crash(i_tens)
                         itens.append(i_tens)
                         itens.append(",")
+                    if len(itens) == 6:
+                        itens.append('sair')
+                        i_tens= "sair"
                 if len(itens) == 0:
                     
                     itens=["x.x"]
 
-                if len(itens) == 6:
-                    
-                    i_tens= "sair"
 
                 if saida == '=':
                     print('saindo...')
@@ -186,11 +199,14 @@ def primeiros_dados (dados):
                             i_tens_b = 'sair'
                         
                         if i_tens_b != "sair":
+                            i_tens_b = anti_crash(i_tens_b)
                             itens_b.append(i_tens_b)
                             itens_b.append(",")
                         
                         if len(itens_b) == 10:
+                            itens_b.append('sair')
                             i_tens_b = "sair"
+                            
 
                     if len(itens_b) == 0:
                         itens_b=["x.x"]
@@ -205,58 +221,68 @@ def primeiros_dados (dados):
                             print('saindo...')
                             return  '=' 
                         else:
+                            skill_Q = anti_crash(skill_Q)
                             skill_W = input('Skill W: ')
                             if skill_W == '=':
                                 print('saindo...')
                                 return '='
                             else:
+                                skill_W = anti_crash(skill_W)
                                 skill_E = input('Skill E: ')
                                 if skill_E == '=':
                                     print('saindo...')
                                     return '='
                                 else:
+                                    skill_E = anti_crash(skill_E)
                                     skill_R = input('Skill R: ')
                                     if skill_R == '=':
                                         print('saindo...')
                                         return '='
                                     else:
-                                        
+                                        skill_R = anti_crash(skill_R)
                                         dica=input("dicas early-game >> ")
                                         if dica == '=':
                                             print('saindo...')
                                             return '='
                                         else:
+                                            dica = anti_crash(dica)
                                             tatic=input("diga qual tática recomenda >> ")
                                             if tatic == '=':
                                                 print('saindo...')
                                                 return '='
                                             else:
+                                                tatic = anti_crash(tatic)
                                                 wr=input("diga o winrate profissionalmente >>")
                                                 if wr == '=':
                                                     print('saindo...')
                                                     return '='
                                                 else:
+                                                    wr = anti_crash(wr)
                                                     dificult=input("diga a dificuldade >>")
                                                     if dificult == '=':
                                                         print('saindo...')
                                                         return '='
                                                     else:
-
+                                                        dificult = anti_crash(dificult)
                                                         wa=input("diga os counters nesse match >>")
                                                         if wa == '=':
                                                             print('saindo...')
                                                             return '='
                                                         else:
+                                                            wa = anti_crash(wa)
                                                             wrelo=input("diga o winrate no seu elo >>")
                                                             if wrelo == '=':
                                                                 print('saindo...')
                                                                 return '=' 
                                                             else:
+                                                                wrelo = anti_crash(wrelo)
                                                                 passive=input("diga a passiva do champion>>")
                                                                 if passive == "=":
                                                                     print("saindo...")
                                                                     return '='
                                                                 os.system("clear")
+                                                                
+                                                                passive = anti_crash(passive)
                                                                 print("Parábens invocador , agora você tem um save :)")
 
                                                                 dic = {'Rota': route,
