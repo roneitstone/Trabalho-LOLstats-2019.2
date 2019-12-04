@@ -104,13 +104,19 @@ def view():
         linha()
         response =input("Qual a lane você deseja ver os saves invocador ?>>")
         linha()
-        if response != "top" and response != "mid" and response != "adcarry" and response != "suport" and response != "jungler":
-            verify = 0
-            print("*[invocador essa lane não existe , tente novamente :)]*")
-            linha()
-
-        else:
+        if response == '=':
+            return '*'
             verify = 1
+            print(reponse, 'yey')
+        else:
+            print('ola', response)
+            if response != "top" and response != "mid" and response != "adcarry" and response != "suport" and response != "jungler" and response != '=':
+                verify = 0
+                print("*[invocador essa lane não existe , tente novamente :)]*")
+                linha()
+
+            else:
+                verify = 1
     
     if response == "adcarry":
         

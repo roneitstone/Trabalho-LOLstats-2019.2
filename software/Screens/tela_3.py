@@ -153,6 +153,7 @@ def primeiros_dados (dados):
                 print('saindo...')
                 return '='
             else :
+                cont = 0
                 print("(agora se quiser sair dos (itens indicados) é so escrever (sair))")
                 while i_tens != 'sair': 
                     
@@ -163,13 +164,14 @@ def primeiros_dados (dados):
                     if i_tens != "sair":
                         itens.append(i_tens)
                         itens.append(",")
+                    if len(itens) == 6:
+                    
+                        i_tens= "sair"
+                        itens.append('sair')
                 if len(itens) == 0:
                     
                     itens=["x.x"]
 
-                if len(itens) == 6:
-                    
-                    i_tens= "sair"
 
                 if saida == '=':
                     print('saindo...')

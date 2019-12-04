@@ -27,7 +27,7 @@ def main ():
         if response!= "=" and response != "-" and response != "*":
             os.system("clear")
             tela_3.primeiros_dados(response)
-    if response != 'new' and response != '~' and response != '=':
+    if response != 'new' and response != '~' and response != '=' and response != '*':
         print(' nao é uma resposta valida, tente novamente XP')
         
     if response ==  '=':
