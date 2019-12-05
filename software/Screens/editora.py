@@ -141,13 +141,50 @@ def edit(dados,line):
             verif = 0
             while verif == 0:
                 tela_3.organiza()
-                mudanca = input('digite a nova mudança >> ')
                 if choice == 'dicas' or choice == 'taticas_ing':
+                    mudanca = input('digite a nova mudança >> ')
                     if len(mudanca) < 100:
                         verif = 1
                     else: 
                         print('100 caracteres não são suportados, tente novamente')
-                else:
+                if choice == 'itens_padroes' or choice == 'itens_alternativos':
+                    print('para parar de adicionar itens digite sair e para sair da função aperte =')
+                    print('==========================================================================')
+                    print('somente sao permitidos 6 itens de 20 caracteres cada ')
+                    i_tens = 0
+                    saida = 0
+                    itens = []
+                    while i_tens != 'sair': 
+                        tela_3.organiza()
+                        i_tens =  input('digite a nova mudança >> ')
+                        if len(i_tens) >= 20:
+                            print('20 caracteres ou mais não são válidos, tente novamente')
+                        else:
+                            if i_tens == '=':
+                                saida = '='
+                                i_tens = 'sair'
+                            if i_tens != "sair":
+                                i_tens = tela_3.anti_crash(i_tens)
+                                itens.append(i_tens)
+                                itens.append(",")
+                            if len(itens) == 12:
+                                itens.append('sair')
+                                i_tens= "sair"
+                    if len(itens) == 0:
+                    
+                        itens=["x.x"]
+
+
+                    if saida == '=':
+                        print('saindo...')
+                        verify = 1
+                        verif = 1
+                    else:
+                        itens.pop()
+                        mudanca = ''.join(itens)
+                        verif = 1
+                if choice !='dicas' and choice != 'taticas_ing' and choice != 'itens_padroes' and choice != 'itens_alternativos':
+                    mudanca = input('digite a nova mudança >> ')
                     if len(mudanca) < 20:
                         verif = 1
                     else:
