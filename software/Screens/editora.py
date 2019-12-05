@@ -160,7 +160,7 @@ def edit(dados,line):
             print("antigo>>>",dic[choice],"// novo>>>",mudanca)
             print()
             dic[choice]=mudanca
-            verify = 1
+            
             
 
     os.system("clear")
