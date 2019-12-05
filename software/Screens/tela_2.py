@@ -7,7 +7,6 @@ def menu ():
     #print('#-        Para editar algo ja salvo digite -         -#')
     print('#- Para continuar e fazer um novo save digite new    -#')
     print('#######################################################')
-    print(' Rotas deverão ser top, jungler, mid, adcarry ou suport')
 
     resposta = input('==== ')
 

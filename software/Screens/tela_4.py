@@ -107,7 +107,6 @@ def view():
         if response == '=':
             return '*'
             verify = 1
-            print(reponse, 'yey')
         else:
             print('ola', response)
             if response != "top" and response != "mid" and response != "adcarry" and response != "suport" and response != "jungler" and response != '=':
