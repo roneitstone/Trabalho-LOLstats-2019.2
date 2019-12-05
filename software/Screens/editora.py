@@ -114,6 +114,7 @@ def edit(dados,line):
     
     while verify == 0:
         logo()
+        tela_3.organiza()
         print()
         print("*[não se esqueça de digitar igual ao mostrado para acessar o local e para sair digite (=), invocador]*")
         print()
@@ -137,7 +138,21 @@ def edit(dados,line):
             print()
             print('Lembrando que não poderá ser usadas / nos novos valores adicionados')
             print()
-            mudanca=input("digite a nova mudança >>")
+            verif = 0
+            while verif == 0:
+                tela_3.organiza()
+                mudanca = input('digite a nova mudança >> ')
+                if choice == 'dicas' or choice == 'taticas_ing':
+                    if len(mudanca) < 100:
+                        verif = 1
+                    else: 
+                        print('100 caracteres não são suportados, tente novamente')
+                else:
+                    if len(mudanca) < 20:
+                        verif = 1
+                    else:
+                        print('20 caracteres não são suportados, tente novamente')
+            verif = 0
             mudanca =  tela_3.anti_crash(mudanca)
             print()
             linha()
@@ -145,6 +160,7 @@ def edit(dados,line):
             print("antigo>>>",dic[choice],"// novo>>>",mudanca)
             print()
             dic[choice]=mudanca
+            verify = 1
             
 
     os.system("clear")
