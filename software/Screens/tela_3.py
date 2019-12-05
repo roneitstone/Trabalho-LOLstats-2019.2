@@ -121,7 +121,10 @@ def primeiros_dados (dados):
     verif = 0
     if len(dados) == 0: 
         verify=0
+
         organiza()
+       
+
         while verify == 0:
             print('lembrando invocador, por favor nao utilize / no preenchimento das perguntas')
             print()
@@ -172,6 +175,8 @@ def primeiros_dados (dados):
                 route = anti_crash(route)
                 cont = 0
                 print("(agora se quiser sair dos (itens indicados) é so escrever (sair))")
+                print("*[só serão permitidos 6 itens salvos e para voltar ao menu digite = ]*")
+
                 while i_tens != 'sair': 
                     organiza()
                     i_tens =  input('Itens indicados: ')
@@ -198,10 +203,14 @@ def primeiros_dados (dados):
                     return '='
                 else:
                     itens.pop()
+
                     print('(digite os itens e quando acabar digite (sair) para continuar)')
                     print('para sair do programa ainda vale digitar (=)')
                     while i_tens_b != 'sair':
                         organiza() 
+
+                
+
                         i_tens_b =  input('Itens alternativos: ')
                         if len(i_tens_b) >= 20:
                             print('20 caracteres não são suportados, tente novamente')
@@ -228,6 +237,7 @@ def primeiros_dados (dados):
                         return '='
                     else:
                         itens_b.pop()
+
                         while verif == 0:
                             
                             skill_Q = input('Skill Q: ')
@@ -237,6 +247,8 @@ def primeiros_dados (dados):
                                 organiza()
                                 print('20 caracteres não são suportados, tente novamente')
                         verif = 0
+
+
                         if skill_Q == '=':
                             print('saindo...')
                             return  '=' 

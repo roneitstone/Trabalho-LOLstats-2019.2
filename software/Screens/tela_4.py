@@ -101,6 +101,7 @@ def view():
     verify = 0
     while verify == 0:
         print("*[escolha uma dessas rotas invocador top, mid, adcarry, suport, jungler.]*")
+        print("*[Para sair invocador , digite = ]*")
         linha()
         response =input("Qual a lane você deseja ver os saves invocador ?>>")
         linha()
