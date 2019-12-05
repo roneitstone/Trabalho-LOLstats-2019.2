@@ -128,13 +128,21 @@ def primeiros_dados (dados):
         while verify == 0:
             print('lembrando invocador, por favor nao utilize / no preenchimento das perguntas')
             print()
+            print("*[Para voltar ao menu digite = em qualquer pergunta]*")
+            print()
             name = input('Nome do campeão: ')
+            if name == "=":
+                verify = 1
+            if len(name) <= 1 and name != "=":
+                print("*[isso não é um nome invocador ]*")
+                verify = 0
+            
             if len(name) > 20:
                 verify = 0
                 print()
                 print("nome grande de mais invocador")
                 print()
-            if len(name) <= 20:
+            if len(name) <= 20 and len(name) > 1:
                 name = anti_crash(name)
                 verify=1
         organiza()
@@ -161,7 +169,7 @@ def primeiros_dados (dados):
                 if route == "=":
                     verify=1
                 
-                if route != "jungler" and route != "top" and route != "mid" and route != "adcarry" and route != "suport":
+                if route != "jungler" and route != "top" and route != "mid" and route != "adcarry" and route != "suport" and route != "=":
                     verify=0
                     print("digite uma rota existente, invocador :/")
                 else:
@@ -170,6 +178,7 @@ def primeiros_dados (dados):
             if route == '=':
                 print('saindo...')
                 return '='
+            
             else :
                 organiza()
                 route = anti_crash(route)

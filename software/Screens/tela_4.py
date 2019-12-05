@@ -64,19 +64,22 @@ def interface(lista):
                     linha()
                     line=int(input("digite o numero do save a ser editado ,invocador>> "))
                     linha()
+                    verify = 1
                 except:
                     print("*[use os números invocador :)]*")
                     verify=0
-
-                if line > cont:
+                    line = 1000
+                if line != 1000:
                     
-                    print("*[não existe esse save]*")
-                    verify = 0
-                if line <= cont:
-                    verify=1 
-                    editora.edit(lista,line)
-                    return "*"
-                    verify=1
+                    if line > cont:
+                        print("*[não existe esse save]*")
+                        verify = 0
+                    
+                    if line <= cont:
+                        verify=1 
+                        editora.edit(lista,line)
+                        return "*"
+                        verify=1
 
         if choice != "*" and choice != "=" and choice != "-":
             
