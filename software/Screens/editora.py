@@ -127,7 +127,7 @@ def edit(dados,line):
         if choice == "=":
             break
         
-        if choice != "rota" and choice!="nome" and choice!="dicas" and choice != "itens_padroes" and choice!="itens_alternativos" and choice!= "skill.e" and choice!= "skill.q" and choice!= "skill.w" and choice!="skill.r" and choice!= "passive" and choice!= "taticas_ing" and choice!="win_rate" and choice!="dificuldade" and choice!="weak_again" and choice!= "win_rate_elo" and choice!= "=":
+        if choice == "rota" and choice!="nome" and choice!="dicas" and choice != "itens_padroes" and choice!="itens_alternativos" and choice!= "skill.e" and choice!= "skill.q" and choice!= "skill.w" and choice!="skill.r" and choice!= "passive" and choice!= "taticas_ing" and choice!="win_rate" and choice!="dificuldade" and choice!="weak_again" and choice!= "win_rate_elo" and choice!= "=":
             print()
             print("*[Esse local não existe invocador]*")
             print()

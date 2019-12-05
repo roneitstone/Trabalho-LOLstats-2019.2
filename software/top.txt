@@ -1,2 +1,3 @@
-top/Garen/aaaa/cutelo-negro/fúria-de-sterak/acerto-decisivo/coragem/julgamento/justiça-demaciana/perseverança/colocar-pressao-nos-matchups-melees/50%-Profissional/2/win-rate-vs-jax-50%-fiora-49%/ferro-60%win/
+top/Garen/aaaa/cutelo-negro/fúria-de-sterak/acerto-decisivo/coragem/julgamento/justiça-demaciana/perseverança/colocar-pressao-nos-matchups-melees/50%-Profissional/1/win-rate-vs-jax-50%-fiora-49%/ferro-60%win/
 top/Gnar/controle-de-forma-consciente-sua-passiva/cutelo-negro/malho-congelado/bumerange:pedregulho/hiperativo:safanao/salto:encontrao/gnar!/fúria-gentética/pegar-prioridade-na-rota-e-wardar-a-jungle-adversária/48%-Profissional/5/win-rate-vs-camille-51%-garen-52%/ferro-50%win/
+top/Darius;Assasino/agressivo no early/Randuin,couraca do defunto,solari,tabi ninja,cutelo negro,gume do infinito,/bota da velocidade,thornmail,veu da banshe/giro arrebatador/teste/teste/teste/teste/matar no lvl 3 ao 6 e ficar off tank late game/65%/3/fiora>70%/70%/
