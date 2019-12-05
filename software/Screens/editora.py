@@ -1,6 +1,6 @@
 import os
 from Screens import tela_4
-from tela_3 import anti_crash
+from Screens import tela_3
 def editarquivo(dic,line,dados):
     cont=0
     save=[]

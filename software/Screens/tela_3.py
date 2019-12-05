@@ -117,6 +117,7 @@ def linha():
 def primeiros_dados (dados):
     if len(dados) == 0: 
         verify=0
+        print("*[para sair digite = ]*")
         while verify == 0:
             print('lembrando invocador, por favor nao utilize / no preenchimento das perguntas')
             print()
@@ -166,6 +167,8 @@ def primeiros_dados (dados):
                 route = anti_crash(route)
                 cont = 0
                 print("(agora se quiser sair dos (itens indicados) é so escrever (sair))")
+                print("*[só serão permitidos 6 itens salvos e para voltar ao menu digite = ]*")
+
                 while i_tens != 'sair': 
                     
                     i_tens =  input('Itens indicados: ')
@@ -189,8 +192,8 @@ def primeiros_dados (dados):
                     return '='
                 else:
                     itens.pop()
-                    print('(digite os itens e quando acabar digite (sair) para continuar)')
-                    print('para sair do programa ainda vale digitar (=)')
+                    print('*[digite os itens e quando acabar digite (sair) para continuar]*')
+                    print('lembrando invocador limite de 10 itens salvos e para sair do programa ainda vale digitar (=)')
                     while i_tens_b != 'sair': 
                         i_tens_b =  input('Itens alternativos: ')
                         
@@ -216,6 +219,7 @@ def primeiros_dados (dados):
                         return '='
                     else:
                         itens_b.pop()
+                        print("*[Para voltar ao menu nas opções abaixo digite = ]*")
                         skill_Q = input('Skill Q: ')
                         if skill_Q == '=':
                             print('saindo...')
