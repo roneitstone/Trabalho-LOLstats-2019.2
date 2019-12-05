@@ -199,7 +199,7 @@ def primeiros_dados (dados):
                             i_tens = anti_crash(i_tens)
                             itens.append(i_tens)
                             itens.append(",")
-                        if len(itens) == 6:
+                        if len(itens) == 12:
                             itens.append('sair')
                             i_tens= "sair"
                 if len(itens) == 0:
@@ -233,7 +233,7 @@ def primeiros_dados (dados):
                                 itens_b.append(i_tens_b)
                                 itens_b.append(",")
                             
-                            if len(itens_b) == 10:
+                            if len(itens_b) == 12:
                                 itens_b.append('sair')
                                 i_tens_b = "sair"
                             
